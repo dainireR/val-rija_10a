@@ -1,3 +1,5 @@
+#augšpielāde
+
 v1=input("Ivadi 1. virkni: ")
 v2=input("Ivadi 2. virkni: ")
 v3=input("Ivadi 3. virkni: ")
@@ -16,4 +18,5 @@ elif len(v3)>len(v2) and len(v3)>len(v1):
     print(v3[::-2])
     print(f'Virknē {v3} ir {b2} patskaņu')
 else:
+
     print("Kļūda!!!")
