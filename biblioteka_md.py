@@ -1,19 +1,14 @@
-import re
-with open("klienti.txt","r",encoding="utf-8") as datne:
-    dati= datne.read()
-print(type(dati))
+import pyjokes
 
-epasti=re.findall(r"\w+@\w+\.\w+",dati)
-print(epasti)
-print(len(epasti))
+print(pyjokes.get_joke())
 
+import pyfiglet
+vards=pyfiglet.figlet_format("Valērija", font="Comic Sans MS")
+print(vards)
 
-telefoni=re.findall(r"\d{8}",dati)
-print(telefoni)
+import cowsay
 
-aiz=re.sub(r"\d{8}","📱",dati)
-print(aiz)
+cowsay.cow(pyjokes.get_joke())
+ 
 
-datne=open("klienti_anon.txt","w",encoding="utf-8")
-datne.write(aiz)
-datne.close()
+ print(cowsay.get_output_string('cow', pyjokes.get_joke()))
